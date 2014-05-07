@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nonary Game Companion</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <h1>Nonary Game Companion</h1>
+    <p>
+        I really liked the idea of the Nonary game in 999 so I decided
+        to implement a solution in Javascript for it. You provide the door you want
+        to get through and the numbers for the people present and click calculate. I
+        may add the ability to provide a range or door numbers and return all the combinations
+        people could use to go through in the future. If you wanna take a shot at it yourself
+        send a pull request on Github.
+    </p>
+    <p>
+        <b>Door:</b> <select name="doors" id="doors">
+            <optgroup label="Doors">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+            </optgroup>
+        </select>
+    </p>
+    <form>
+        <fieldset>
+            <legend><b>People Present:</b></legend>
+            <input type="checkbox" id="c1" /><label for="c1">1</label>
+            <input type="checkbox" id="c2" /><label for="c2">2</label>
+            <input type="checkbox" id="c3" /><label for="c3">3</label>
+            <input type="checkbox" id="c4" /><label for="c4">4</label>
+            <input type="checkbox" id="c5" /><label for="c5">5</label>
+            <input type="checkbox" id="c6" /><label for="c6">6</label>
+            <input type="checkbox" id="c7" /><label for="c7">7</label>
+            <input type="checkbox" id="c8" /><label for="c8">8</label>
+            <input type="checkbox" id="c9" /><label for="c9">9</label>
+        </fieldset>
+    </form>
+    <br/>
+    <button type="button" onclick=" Nonary.generateOutput()">Get Combos</button>
+    <h3>Possible Combinations:</h3>
+    <div id="combos"></div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
